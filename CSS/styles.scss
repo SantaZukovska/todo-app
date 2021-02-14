@@ -1,0 +1,173 @@
+body {
+  background-color:  #000024;
+  min-width: 320px;
+}
+
+.input-group > input,
+.input-group > button,
+.my-tasks > h3,
+.completed-tasks > h3,
+.task > label,
+.done-task > label {
+  font-family: open-sans, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+main {
+  padding: 0vw 8vw;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.row > h1 {
+  font-family: raleway, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 8vw;
+  color: white;
+  position: absolute;
+  padding: 0 8vw;
+  align-self: flex-end;
+  margin-bottom: 14vw;
+}
+
+.row > img {
+  width: 100%;
+  height: auto;
+  position: relative;
+  margin-bottom: 28px;
+}
+
+// Custom Checkbox
+
+.c-custom-checkbox > span {
+align-self: center;
+margin-left: 8px;
+width: 60vw;
+}
+
+.c-custom-checkbox {
+  display: flex;
+  // width: 100%;
+}
+
+.hidden-checkbox {
+  position: absolute;
+  width: 2em;
+  height: 2em;
+  opacity: 0;
+}
+
+.c-custom-checkbox svg {
+  width: 2em;
+  height: 2em;
+  background-color: #131333;
+  border-radius: 5px;
+  margin-right: 0.5em;
+  margin-top: .1em;
+}
+
+.c-custom-checkbox input[type="checkbox"]:checked + svg {
+  .cb-bg {
+    fill:  #131333;
+    stroke:  #131333;
+   }
+
+   .cb-cm {
+    stroke: #00B7D4;
+  }
+}
+
+// Custom Checkbox end
+
+.input-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* width: 100%; */
+}
+
+.input-group > input {
+  border-radius: 30px 0px 0px 30px;
+  background-color: white;
+  width: 70vw;
+  height: 50px;
+  padding-left: 5vw;
+  border-color:  #000024;
+  border-right: none;
+}
+
+.input-group > button {
+  border-color:  #000024;
+  background-color: #c4c4c9;
+  color:  #000024;
+  font-size: 4vw;
+  border-radius: 0px 30px 30px 0px;
+  padding: 0px 20px;
+  font-family: open-sans, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.input > ::placeholder {
+  color: #000024;
+
+}
+
+.my-tasks > h3,
+.completed-tasks > h3 {
+  color: #c4c4c9;
+  padding-left: 5vw;
+  margin-bottom: 2px;
+  font-size: 5vw
+}
+
+.my-tasks > hr,
+.completed-tasks > hr {
+  border: 0;
+  height: 1px;
+  background: #c4c4c9;
+  margin-bottom: 15px;
+}
+
+.task {
+  background-color: rgba(255, 255, 255, 0.25);
+  display: flex;
+  flex-direction: row;
+  border-radius: 12px;
+  padding: 5.7vw 5vw;
+  margin-bottom: 14px;
+}
+
+.task > label,
+.done-task > label {
+  color: #c4c4c9;
+  font-size: 4vw;
+  // padding-left: 5vw;
+  // align-self: center;
+}
+
+.task > input {
+  align-self: center;
+}
+
+.done-task {
+  background-color: #131333;
+  display: flex;
+  flex-direction: row;
+  border-radius: 12px;
+  padding: 5.7vw 5vw;
+  margin-bottom: 14px;
+  flex-basis: 100%;
+}
+
+.bin {
+  // margin-left: auto;
+
+  // margin-right: 20px;
+}
