@@ -1,7 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
-const WriteFilePlugin = require('write-file-webpack-plugin');
 
 module.exports = {
   plugins: [
@@ -10,10 +9,9 @@ module.exports = {
     }),
     new CopyPlugin({
         patterns: [
-          { from: "src/assets", to: "dest/assets" },
+          { from: "src/assets", to: "assets" },
         ],
       }),
-      new WriteFilePlugin()
   ],
   module: {
     rules: [
@@ -27,5 +25,11 @@ module.exports = {
         use: ["babel-loader"],
       },
     ],
+  },
+  devServer: {
+    writeToDisk: true,
+  },
+  optimization: {
+    splitChunks: { chunks: "all" }
   },
 };
