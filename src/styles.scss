@@ -1,9 +1,9 @@
-@import '~normalize.css/normalize.css';
-@import url('https://use.typekit.net/tis5ukz.css');
+@import "~normalize.css/normalize.css";
+@import url("https://use.typekit.net/tis5ukz.css");
 
 body {
-  background-color:  #000024;
-  min-width: 320px;
+  background-color: #000024;
+  // min-width: 320px;
 }
 
 .input-group > input,
@@ -17,13 +17,23 @@ body {
   font-style: normal;
 }
 
+.outer-container {
+  max-width: 768px;
+  margin: 0 auto;
+  border-color: #c4c4c9;
+}
+
+.inner-container {
+  // max-width: 620px;
+  margin: 0 auto;
+}
+
 main {
-  padding: 0vw 8vw;
+  padding: 0 8%;
 }
 
 .row {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: row;
 }
 
@@ -34,29 +44,29 @@ main {
   font-size: 8vw;
   color: white;
   position: absolute;
-  padding: 0 8vw;
+  padding: 0 1em;
   align-self: flex-end;
-  margin-bottom: 14vw;
+  margin-bottom: 12%;
 }
 
 .row > img {
   width: 100%;
   height: auto;
   position: relative;
-  margin-bottom: 28px;
+  margin-bottom: 6%;
 }
 
 // Custom Checkbox
 
 .c-custom-checkbox > span {
-align-self: center;
-margin-left: 8px;
-width: 60vw;
+  align-self: center;
+  margin-left: 8px;
+  width: 60vw;
 }
 
 .c-custom-checkbox {
   display: flex;
-  // width: 100%;
+  width: 100%;
 }
 
 .hidden-checkbox {
@@ -69,20 +79,21 @@ width: 60vw;
 .c-custom-checkbox svg {
   width: 2em;
   height: 2em;
-  background-color: #131333;
+  background-color: #c4c4c9;
   border-radius: 5px;
   margin-right: 0.5em;
-  margin-top: .1em;
+  margin-top: 0.1em;
+  align-self: center;
 }
 
 .c-custom-checkbox input[type="checkbox"]:checked + svg {
   .cb-bg {
-    fill:  #131333;
-    stroke:  #131333;
-   }
+    fill: #131333;
+    stroke: #131333;
+  }
 
-   .cb-cm {
-    stroke: #00B7D4;
+  .cb-cm {
+    stroke: #00b7d4;
   }
 }
 
@@ -96,30 +107,31 @@ width: 60vw;
 }
 
 .input-group > input {
-  border-radius: 30px 0px 0px 30px;
+  border-radius: 7vw 0px 0px 7vw;
   background-color: white;
-  width: 70vw;
-  height: 50px;
+  width: 80%;
+  height: 12vw;
   padding-left: 5vw;
-  border-color:  #000024;
+  border-color: #000024;
   border-right: none;
 }
 
 .input-group > button {
-  border-color:  #000024;
+  width: 20%;
+  border-color: #000024;
   background-color: #c4c4c9;
-  color:  #000024;
+  color: #000024;
   font-size: 4vw;
-  border-radius: 0px 30px 30px 0px;
+  border-radius: 0px 7vw 7vw 0px;
   padding: 0px 20px;
   font-family: open-sans, sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
-.input > ::placeholder {
-  color: #000024;
-
+::placeholder {
+  font-size: 4vw;
+  padding: 0 0.8em;
 }
 
 .my-tasks > h3,
@@ -127,7 +139,7 @@ width: 60vw;
   color: #c4c4c9;
   padding-left: 5vw;
   margin-bottom: 2px;
-  font-size: 5vw
+  font-size: 5vw;
 }
 
 .my-tasks > hr,
@@ -143,14 +155,16 @@ width: 60vw;
   display: flex;
   flex-direction: row;
   border-radius: 12px;
-  padding: 5.7vw 5vw;
+  padding: 4vw 5vw;
   margin-bottom: 14px;
+  align-content: flex-start;
 }
 
 .task > label,
 .done-task > label {
   color: #c4c4c9;
   font-size: 4vw;
+  // width: 90%;
   // padding-left: 5vw;
   // align-self: center;
 }
@@ -164,13 +178,56 @@ width: 60vw;
   display: flex;
   flex-direction: row;
   border-radius: 12px;
-  padding: 5.7vw 5vw;
+  padding: 4vw 5vw;
   margin-bottom: 14px;
-  flex-basis: 100%;
+  // flex-basis: 100%;
 }
 
-.bin {
-  // margin-left: auto;
 
-  // margin-right: 20px;
+.bin {
+  height: 1.7em;
+  align-self: center;
+}
+
+@media screen and (min-width: 768px) {
+  .input-group > button,
+  ::placeholder,
+  .task > label,
+  .done-task > label {
+    font-size: 32px;
+  }
+  .input-group > input {
+    height: 94px;
+  }
+  .task,
+  .done-task {
+    padding: 30px 40px;
+  }
+  .row > h1 {
+    font-size: 60px;
+    margin-bottom: 90px;
+  }
+  .my-tasks > h3,
+  .completed-tasks > h3 {
+    font-size: 40px;
+    padding: 0px 40px;
+  }
+  ::placeholder {
+    padding: 0px 10px;
+  }
+
+  .c-custom-checkbox svg {
+    width: 63px;
+    height: 63px;
+    border-radius: 5px;
+  }
+  .task > label,
+  .done-task > label {
+    width: 90%;
+  }
+
+  .c-custom-checkbox > span{
+    width: 440px;
+  }
+
 }
